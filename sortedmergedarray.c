@@ -4,7 +4,7 @@
 void mergeSortedArrays(int* array1, int size1, int* array2, int size2, int* mergedArray) {
     int i = 0, j = 0, k = 0;
 
-    // Merge the arrays while both have elements
+    
     while (i < size1 && j < size2) {
         if (array1[i] <= array2[j]) {
             mergedArray[k++] = array1[i++];
@@ -13,12 +13,10 @@ void mergeSortedArrays(int* array1, int size1, int* array2, int size2, int* merg
         }
     }
 
-    // Copy remaining elements of array1, if any
     while (i < size1) {
         mergedArray[k++] = array1[i++];
     }
 
-    // Copy remaining elements of array2, if any
     while (j < size2) {
         mergedArray[k++] = array2[j++];
     }
